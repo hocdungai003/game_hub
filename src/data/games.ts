@@ -1,4 +1,5 @@
 // data/games.ts
+import ransanmoi01 from '../assets/ransanmoi01.png'
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports'] as const;
 
 export const GAMES = [
@@ -83,7 +84,7 @@ export const FEATURED_GAME = {
   id: 'featured-1',
   title: 'Rắn Săn Mồi - 01',
   description: 'Embark on an epic journey through mystical lands and face challenging quests.',
-  image: '/src/assets/imgs/ransanmoi01.png',
+  image: ransanmoi01,
   rating: 4.8,
   players: '10K+',
   playLink: 'https://hocdungai003.github.io/ran_san_moi_01/',
