@@ -81,9 +81,9 @@ export const ANIMATIONS = [
 
 export const FEATURED_GAME = {
   id: 'featured-1',
-  title: 'Epic Adventure Quest',
+  title: 'Rắn Săn Mồi - 01',
   description: 'Embark on an epic journey through mystical lands and face challenging quests.',
-  image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=1200&h=600',
+  image: '/src/assets/imgs/ransanmoi01.png',
   rating: 4.8,
   players: '10K+',
   playLink: 'https://hocdungai003.github.io/ran_san_moi_01/',
