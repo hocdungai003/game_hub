@@ -7,7 +7,7 @@ import AnimationPage from './pages/AnimationPage';
 import Footer from './components/Footer';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State cho sidebar trên mobile
