@@ -42,7 +42,7 @@ function App() {
           <Sidebar currentPage={currentPage} onNavigate={setCurrentPage} isOpen={isSidebarOpen} onClose={toggleSidebar} />
 
           <div className="flex-1">
-            <header className="fixed top-0 right-0 left-0 md:left-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-50">
+            <header className="fixed top-0 right-0 left-0 md:left-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-10">
               <div className="flex items-center justify-between h-full px-6">
                 {/* Nút Menu trên mobile */}
                 <button
