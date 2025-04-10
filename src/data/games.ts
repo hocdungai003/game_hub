@@ -2,6 +2,8 @@
 import ransanmoi01 from '../assets/ransanmoi01.png'
 import phaohoa from '../assets/phaohoa.png'
 import caro003 from '../assets/caro003.png'
+import banca from '../assets/banca.png'
+import chemhoaqua from '../assets/chemhoaqua.png'
 import ransanmoivideo from '../assets/videoransanmoi.mp4'
 
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports'] as const;
@@ -28,24 +30,24 @@ export const GAMES = [
     players: '5K+',
     playLink: 'https://hocdungai003.github.io/caro003/',
   },
-  // {
-  //   id: 'game-2',
-  //   title: 'Racing Legends',
-  //   category: 'Sports',
-  //   image: 'https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&q=80&w=400&h=300',
-  //   rating: 4.7,
-  //   players: '8K+',
-  //   playLink: '/games/racing-legends',
-  // },
-  // {
-  //   id: 'game-3',
-  //   title: 'Puzzle Master',
-  //   category: 'Puzzle',
-  //   image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&q=80&w=400&h=300',
-  //   rating: 4.3,
-  //   players: '3K+',
-  //   playLink: '/games/puzzle-master',
-  // },
+  {
+    id: 'game-2',
+    title: 'Bắn Cá',
+    category: 'Strategy',
+    image: banca,
+    rating: 4.7,
+    players: '8K+',
+    playLink: 'https://hocdungai003.github.io/ban_ca/',
+  },
+  {
+    id: 'game-3',
+    title: 'Chém hoa quả',
+    category: 'Puzzle',
+    image: chemhoaqua,
+    rating: 4.3,
+    players: '3K+',
+    playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
+  },
   // {
   //   id: 'game-4',
   //   title: 'Kingdom Wars',
