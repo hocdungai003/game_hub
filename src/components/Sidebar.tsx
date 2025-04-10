@@ -20,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, onNavigate, isOpen, onCl
       {/* Overlay khi sidebar mở trên mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-20 md:hidden"
+          className="fixed inset-0 bg-black/50 z-30 md:hidden"
           onClick={onClose}
         />
       )}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { GamepadIcon, Search, Moon, Sun, Menu } from 'lucide-react'; // Thêm Menu icon
 import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
@@ -7,15 +7,22 @@ import AnimationPage from './pages/AnimationPage';
 import Footer from './components/Footer';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Mặc định là true (dark mode)
   const [currentPage, setCurrentPage] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State cho sidebar trên mobile
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
+    setIsDarkMode((prev) => !prev);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -42,7 +49,7 @@ function App() {
           <Sidebar currentPage={currentPage} onNavigate={setCurrentPage} isOpen={isSidebarOpen} onClose={toggleSidebar} />
 
           <div className="flex-1">
-            <header className="fixed top-0 right-0 left-0 md:left-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-10">
+            <header className="fixed top-0 right-0 left-0 md:left-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-20">
               <div className="flex items-center justify-between h-full px-6">
                 {/* Nút Menu trên mobile */}
                 <button

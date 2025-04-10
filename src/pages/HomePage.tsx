@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
             Recommended Games
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {recommendedGames.map((game, index) => (
+            {recommendedGames.map((game) => (
               <div
                 key={game.id}
                 className="group relative bg-gray-100 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
