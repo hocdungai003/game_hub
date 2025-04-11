@@ -4,6 +4,7 @@ import phaohoa from '../assets/phaohoa.png'
 import caro003 from '../assets/caro003.png'
 import banca from '../assets/banca.png'
 import chemhoaqua from '../assets/chemhoaqua.png'
+import game2048 from '../assets/2048.png'
 import ransanmoivideo from '../assets/videoransanmoi.mp4'
 
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports'] as const;
@@ -42,21 +43,21 @@ export const GAMES = [
   {
     id: 'game-3',
     title: 'Chém hoa quả',
-    category: 'Puzzle',
+    category: 'Action',
     image: chemhoaqua,
     rating: 4.3,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
   },
-  // {
-  //   id: 'game-4',
-  //   title: 'Kingdom Wars',
-  //   category: 'Strategy',
-  //   image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=400&h=300',
-  //   rating: 4.8,
-  //   players: '12K+',
-  //   playLink: '/games/kingdom-wars',
-  // },
+  {
+    id: 'game-4',
+    title: 'Game 2048',
+    category: 'Strategy',
+    image: game2048,
+    rating: 4.0,
+    players: '12K+',
+    playLink: 'https://hocdungai003.github.io/2048_game/',
+  },
 ];
 export const ANIMATIONS = [
   {
