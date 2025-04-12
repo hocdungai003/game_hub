@@ -5,7 +5,8 @@ import caro003 from '../assets/caro003.png'
 import banca from '../assets/banca.png'
 import chemhoaqua from '../assets/chemhoaqua.png'
 import game2048 from '../assets/2048.png'
-import ransanmoivideo from '../assets/videoransanmoi.mp4'
+import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
+import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
 
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports'] as const;
 
@@ -46,7 +47,7 @@ export const GAMES = [
     category: 'Action',
     image: chemhoaqua,
     rating: 4.3,
-    players: '3K+',
+    players: '13K+',
     playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
   },
   {
@@ -104,14 +105,14 @@ export const ANIMATIONS = [
 
 export const FEATURED_GAME = {
   id: 'featured-1',
-  title: 'Rắn Săn Mồi - 01',
+  title: 'Chém Hoa Quả',
   description: '',
-  rating: 4.5,
-  image: ransanmoi01,
-  video:ransanmoivideo,
-  views: '18K+',
+  rating: 4.3,
+  image: chemhoaqua,
+  video:chemhoaquavideo,
+  views: '13K+',
   players: '10K+',
-  playLink: 'https://hocdungai003.github.io/ran_san_moi_01/',
-  sourceLink: 'https://github.com/hocdungai003/ran_san_moi_01',
+  playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
+  sourceLink: 'https://github.com/hocdungai003/chem_hoa_qua-01',
   featured: true,
 };
