@@ -97,8 +97,8 @@ export const ANIMATIONS = [
 
 export const FEATURED_GAME = {
   id: 'featured-1',
-  title: 'Caro',
-  description: '',
+  title: 'Vua Tiếng Việt',
+  description: 'Xem ai là Vị Vua của Tiếng Việt nào 😒',
   rating: 4.3,
   image: vuatiengviet,
   video:vuatiengvietvid,
