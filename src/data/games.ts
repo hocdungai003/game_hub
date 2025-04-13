@@ -4,11 +4,13 @@ import phaohoa from '../assets/phaohoa.png'
 import caro003 from '../assets/caro003.png'
 import banca from '../assets/banca.png'
 import chemhoaqua from '../assets/chemhoaqua.png'
-import game2048 from '../assets/2048.png'
+import game2048 from '../assets/latthebai.png'
+import latthebai from '../assets/2048.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
+import caro from '../assets/featured/caro.mp4'
 
-export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports'] as const;
+export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports', 'Memory'] as const;
 
 export const GAMES = [
   {
@@ -59,6 +61,15 @@ export const GAMES = [
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/2048_game/',
   },
+  {
+    id: 'game-5',
+    title: 'Lật Thẻ Bài',
+    category: 'Memory',
+    image: latthebai,
+    rating: 4.1,
+    players: '12K+',
+    playLink: 'https://hocdungai003.github.io/lat_the_bai_01/',
+  },
 ];
 export const ANIMATIONS = [
   {
@@ -105,14 +116,14 @@ export const ANIMATIONS = [
 
 export const FEATURED_GAME = {
   id: 'featured-1',
-  title: 'Chém Hoa Quả',
+  title: 'Caro',
   description: '',
   rating: 4.3,
-  image: chemhoaqua,
-  video:chemhoaquavideo,
+  image: caro003,
+  video:caro,
   views: '13K+',
-  players: '10K+',
-  playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
-  sourceLink: 'https://github.com/hocdungai003/chem_hoa_qua-01',
+  players: '13K+',
+  playLink: 'https://hocdungai003.github.io/caro003/',
+  sourceLink: 'https://github.com/hocdungai003/caro003',
   featured: true,
 };
