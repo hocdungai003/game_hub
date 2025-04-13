@@ -6,8 +6,10 @@ import banca from '../assets/banca.png'
 import chemhoaqua from '../assets/chemhoaqua.png'
 import game2048 from '../assets/2048.png'
 import latthebai from '../assets/latthebai.png'
+import vuatiengviet from '../assets/vuatiengviet.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
+import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4'
 import caro from '../assets/featured/caro.mp4'
 
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports', 'Memory'] as const;
@@ -70,6 +72,15 @@ export const GAMES = [
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/lat_the_bai_01/',
   },
+  {
+    id: 'game-6',
+    title: 'Vua Tiếng Việt',
+    category: 'Memory',
+    image: vuatiengviet,
+    rating: 4.9,
+    players: '30K+',
+    playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
+  },
 ];
 export const ANIMATIONS = [
   {
@@ -81,37 +92,7 @@ export const ANIMATIONS = [
     viewers: '7K+',
     viewLink: 'https://hocdungai003.github.io/phao_hoa_nam_moi/',
     sourceLink: 'https://github.com/hocdungai003/phao_hoa_nam_moi',
-  },
-  // {
-  //   id: 'animation-2',
-  //   title: 'Speed Chase',
-  //   category: 'Sports',
-  //   image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=400&h=300',
-  //   views: '12K+',
-  //   viewers: '6K+',
-  //   viewLink: '/animations/speed-chase',
-  //   sourceLink: '/source/speed-chase',
-  // },
-  // {
-  //   id: 'animation-3',
-  //   title: 'Mind Bender',
-  //   category: 'Puzzle',
-  //   image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=400&h=300',
-  //   views: '8K+',
-  //   viewers: '4K+',
-  //   viewLink: '/animations/mind-bender',
-  //   sourceLink: '/source/mind-bender',
-  // },
-  // {
-  //   id: 'animation-4',
-  //   title: 'Epic Saga',
-  //   category: 'Strategy',
-  //   image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=400&h=300',
-  //   views: '20K+',
-  //   viewers: '10K+',
-  //   viewLink: '/animations/epic-saga',
-  //   sourceLink: '/source/epic-saga',
-  // },
+  }
 ];
 
 export const FEATURED_GAME = {
@@ -119,11 +100,11 @@ export const FEATURED_GAME = {
   title: 'Caro',
   description: '',
   rating: 4.3,
-  image: caro003,
-  video:caro,
+  image: vuatiengviet,
+  video:vuatiengvietvid,
   views: '13K+',
   players: '13K+',
-  playLink: 'https://hocdungai003.github.io/caro003/',
-  sourceLink: 'https://github.com/hocdungai003/caro003',
+  playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
+  sourceLink: 'https://github.com/hocdungai003/vua_tieng_viet_003',
   featured: true,
 };
