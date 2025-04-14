@@ -7,6 +7,7 @@ import chemhoaqua from '../assets/chemhoaqua.png'
 import game2048 from '../assets/2048.png'
 import latthebai from '../assets/latthebai.png'
 import vuatiengviet from '../assets/vuatiengviet.png'
+import doantu002 from '../assets/doantu002.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4'
@@ -81,6 +82,15 @@ export const GAMES = [
     players: '30K+',
     playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
   },
+  {
+    id: 'game-7',
+    title: 'Đoán Từ - Trả lời câu hỏi',
+    category: 'Memory',
+    image: doantu002,
+    rating: 4.1,
+    players: '3K+',
+    playLink: 'https://hocdungai003.github.io/doan_tu_002/',
+  },
 ];
 export const ANIMATIONS = [
   {
@@ -99,7 +109,7 @@ export const FEATURED_GAME = {
   id: 'featured-1',
   title: 'Vua Tiếng Việt',
   description: 'Xem ai là Vị Vua của Tiếng Việt nào 😒',
-  rating: 4.3,
+  rating: 4.9,
   image: vuatiengviet,
   video:vuatiengvietvid,
   views: '13K+',
