@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
             >
-              YouTube: Học Dùng AI
+              YouTube
             </a>
           </div>
         </div>
