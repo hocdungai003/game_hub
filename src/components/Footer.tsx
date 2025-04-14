@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Youtube } from 'lucide-react'; // Thêm Youtube icon
+import { Mail, Youtube, Star } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -25,6 +25,19 @@ const Footer: React.FC = () => {
               YouTube: Học Dùng AI
             </a>
           </div>
+        </div>
+
+        {/* Nút Đánh giá */}
+        <div className="flex items-center">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfCwLSyaeBtiZaOBikYzOZNQS_N9V3UNQzhUe4ydzrS9wB47A/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-3 py-1 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-400 transition-colors duration-200"
+          >
+            <Star className="h-4 w-4 mr-1" />
+            <span>Đánh giá</span>
+          </a>
         </div>
 
         {/* No Copyright */}
