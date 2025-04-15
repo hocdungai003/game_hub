@@ -5,8 +5,13 @@ import HomePage from './pages/HomePage';
 import GamesPage from './pages/GamesPage';
 import AnimationPage from './pages/AnimationPage';
 import Footer from './components/Footer';
+import { initGA, logPageView } from './utils/analytics';
 
 function App() {
+   useEffect(() => {
+    initGA();
+    logPageView();
+  }, []);
   const [isDarkMode, setIsDarkMode] = useState(true); // Mặc định là true (dark mode)
   const [currentPage, setCurrentPage] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
