@@ -8,6 +8,7 @@ import game2048 from '../assets/2048.png'
 import latthebai from '../assets/latthebai.png'
 import vuatiengviet from '../assets/vuatiengviet.png'
 import doantu002 from '../assets/doantu002.png'
+import tiengduchoc from '../assets/tiengduchoc.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4'
@@ -90,6 +91,15 @@ export const GAMES = [
     rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/doan_tu_002/',
+  },
+  {
+    id: 'game-8',
+    title: 'Deutsch Lernen',
+    category: 'Memory',
+    image: tiengduchoc,
+    rating: 4.1,
+    players: '3K+',
+    playLink: 'https://hocdungai003.github.io/hoc_tieng_duc/',
   },
 ];
 export const ANIMATIONS = [
