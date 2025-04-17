@@ -9,14 +9,24 @@ import latthebai from '../assets/latthebai.png'
 import vuatiengviet from '../assets/vuatiengviet.png'
 import doantu002 from '../assets/doantu002.png'
 import tiengduchoc from '../assets/tiengduchoc.png'
+import domin from '../assets/domin.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4'
 import caro from '../assets/featured/caro.mp4'
 
-export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports', 'Memory'] as const;
+export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports', 'Memory','Study'] as const;
 
 export const GAMES = [
+  {
+    id: 'game-9',
+    title: 'Dò Mìn',
+    category: 'Memory',
+    image: domin,
+    rating: 4.2,
+    players: '12K+',
+    playLink: 'https://hocdungai003.github.io/do_min_003/',
+  },
   {
     id: 'featured-1',
     title: 'Rắn Săn Mồi - 01',
@@ -61,7 +71,7 @@ export const GAMES = [
     title: 'Game 2048',
     category: 'Strategy',
     image: game2048,
-    rating: 4.0,
+    rating: 4.2,
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/2048_game/',
   },
@@ -95,12 +105,13 @@ export const GAMES = [
   {
     id: 'game-8',
     title: 'Deutsch Lernen',
-    category: 'Memory',
+    category: 'Study',
     image: tiengduchoc,
     rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/hoc_tieng_duc/',
   },
+  
 ];
 export const ANIMATIONS = [
   {
