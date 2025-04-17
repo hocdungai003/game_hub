@@ -3,45 +3,52 @@ import { Mail, Youtube, Star } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 py-4">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-gray-600 dark:text-gray-400 text-sm">
-        {/* Thông tin */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-          <p>Học dùng AI để tạo trải nghiệm tốt hơn</p>
-          <div className="flex items-center">
-            <Mail className="h-4 w-4 mr-1" />
-            <a href="mailto:hocdungai003@gmail.com" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
-              Liên hệ: hocdungai003@gmail.com
-            </a>
-          </div>
-          <div className="flex items-center">
-            <Youtube className="h-4 w-4 mr-1" />
-            <a
-              href="https://www.youtube.com/@hocdungai003"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
-            >
-              YouTube
-            </a>
-          </div>
-        </div>
+    <footer className="relative bg-gradient-to-r from-gray-900 to-indigo-900 text-white py-8 overflow-hidden">
+      {/* Subtle glow effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(79,70,229,0.15),transparent_70%)] opacity-50"></div>
 
-        {/* Nút Đánh giá */}
-        <div className="flex items-center">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Contact & Social Links */}
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="flex items-center gap-2">
+              <Mail className="h-5 w-5 text-indigo-300" />
+              <a
+                href="mailto:hocdungai003@gmail.com"
+                className="text-gray-200 hover:text-indigo-300 transition-colors duration-300"
+              >
+                hocdungai003@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Youtube className="h-5 w-5 text-indigo-300" />
+              <a
+                href="https://www.youtube.com/@hocdungai003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-indigo-300 transition-colors duration-300"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
+
+          {/* Rating Button */}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfCwLSyaeBtiZaOBikYzOZNQS_N9V3UNQzhUe4ydzrS9wB47A/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-3 py-1 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-400 transition-colors duration-200"
+            className="flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg shadow-md transition-all duration-300"
           >
-            <Star className="h-4 w-4 mr-1" />
-            <span>Đánh giá</span>
+            <Star className="h-5 w-5 mr-2" />
+            <span className="font-medium">Đánh Giá</span>
           </a>
         </div>
 
-        {/* No Copyright */}
-        <p>Livaan - No Copyright © {new Date().getFullYear()}</p>
+        {/* Copyright */}
+        <div className="mt-6 pt-4 border-t border-indigo-800/30 text-center">
+          <p className="text-sm text-gray-400">Livaan - No Copyright © {new Date().getFullYear()}</p>
+        </div>
       </div>
     </footer>
   );
