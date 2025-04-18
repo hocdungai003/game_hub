@@ -8,85 +8,83 @@ const HomePage: React.FC = () => {
 
   // Animation variants for featured section
   const featuredTextVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut', staggerChildren: 0.15 },
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
 
   const textChildVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   const featuredVideoVariants = {
-    hidden: { opacity: 0, x: 20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+    hidden: { opacity: 0, x: 10 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   const glowVariants = {
     animate: {
-      opacity: [0.2, 0.6, 0.2],
-      scale: [1, 1.05, 1],
-      transition: { repeat: Infinity, duration: 3 },
+      opacity: [0.3, 0.5, 0.3],
+      scale: [1, 1.02, 1],
+      transition: { repeat: Infinity, duration: 2.5 },
     },
   };
 
   const buttonVariants = {
     hover: {
-      y: -3,
-      boxShadow: '0 8px 20px rgba(59, 130, 246, 0.4)',
+      scale: 1.02,
+      boxShadow: '0 4px 10px rgba(59, 130, 246, 0.2)',
       background: 'linear-gradient(to right, #2563eb, #4f46e5)',
-      border: '2px solid rgba(59, 130, 246, 0.5)',
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
     tap: {
-      y: 0,
-      boxShadow: '0 4px 10px rgba(59, 130, 246, 0.2)',
-      border: '2px solid rgba(59, 130, 246, 0.3)',
-      transition: { duration: 0.2 },
+      scale: 0.98,
+      boxShadow: '0 2px 5px rgba(59, 130, 246, 0.1)',
+      transition: { duration: 0.1 },
     },
   };
 
   const iconVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: 'easeOut' } },
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
   };
 
   const sparkleTrailVariants = {
     animate: {
-      x: [0, 60, 120],
-      y: [0, -30, 0],
-      opacity: [0, 1, 0],
-      transition: { duration: 2.5, repeat: Infinity, delay: Math.random() * 2 },
+      x: [0, 40, 80],
+      y: [0, -20, 0],
+      opacity: [0, 0.8, 0],
+      transition: { duration: 2, repeat: Infinity, delay: Math.random() * 1.5 },
     },
   };
 
   const starfieldVariants = {
     animate: {
-      opacity: [0, 1, 0],
-      x: [0, 20],
-      y: [0, -10],
-      transition: { duration: 4, repeat: Infinity, delay: Math.random() * 3 },
+      opacity: [0, 0.8, 0],
+      x: [0, 10],
+      y: [0, -5],
+      transition: { duration: 3, repeat: Infinity, delay: Math.random() * 2 },
     },
   };
 
   const orbVariants = {
     animate: {
-      x: [0, 50, 0],
-      y: [0, -50, 0],
-      opacity: [0.3, 0.8, 0.3],
-      transition: { duration: 5, repeat: Infinity, ease: 'easeInOut' },
+      x: [0, 30, 0],
+      y: [0, -30, 0],
+      opacity: [0.4, 0.7, 0.4],
+      transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
     },
   };
 
   const waveVariants = {
     animate: {
-      opacity: [0.2, 0.4, 0.2],
-      x: [-20, 20],
-      transition: { repeat: Infinity, duration: 10, ease: 'easeInOut' },
+      opacity: [0.15, 0.3, 0.15],
+      x: [-10, 10],
+      transition: { repeat: Infinity, duration: 8, ease: 'easeInOut' },
     },
   };
 
@@ -94,69 +92,57 @@ const HomePage: React.FC = () => {
     animate: {
       color: ['#ffffff', '#60a5fa', '#a78bfa', '#ffffff'],
       textShadow: [
-        '0 0 5px rgba(59, 130, 246, 0.5)',
-        '0 0 10px rgba(147, 51, 234, 0.5)',
-        '0 0 5px rgba(59, 130, 246, 0.5)',
+        '0 0 3px rgba(59, 130, 246, 0.4)',
+        '0 0 6px rgba(147, 51, 234, 0.4)',
+        '0 0 3px rgba(59, 130, 246, 0.4)',
       ],
-      transition: { repeat: Infinity, duration: 6 },
+      transition: { repeat: Infinity, duration: 5 },
     },
   };
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-950">
-      {/* Featured Section - Compact with enhanced animations */}
-      <section className="relative pt-10 pb-10 md:pt-12 md:pb-12 overflow-hidden">
+      {/* Featured Section */}
+      <section className="relative pt-8 pb-8 md:pt-10 md:pb-10 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 -z-20">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-indigo-500/30 to-purple-500/30"
-            animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'], opacity: [0.8, 1, 0.8] }}
-            transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
+            className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-indigo-500/20 to-purple-500/20"
+            animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'], opacity: [0.7, 0.9, 0.7] }}
+            transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
             style={{ backgroundSize: '200% 200%' }}
           ></motion.div>
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-purple-300/20"
+            className="absolute inset-0 bg-gradient-to-r from-blue-300/15 to-purple-300/15"
             variants={waveVariants}
             animate="animate"
           ></motion.div>
           <div className="absolute inset-0">
             <motion.div
-              className="absolute w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-blue-400/40 rounded-full blur-3xl top-[10%] left-[10%]"
-              animate={{
-                x: [-20, 20],
-                y: [-15, 15],
-                rotate: [0, 10, 0],
-                opacity: [0.3, 0.6, 0.3],
-              }}
-              transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
-            ></motion.div>
-            <motion.div
-              className="absolute w-[180px] h-[180px] sm:w-[350px] sm:h-[350px] bg-indigo-400/40 rounded-full blur-3xl bottom-[15%] right-[15%]"
-              animate={{
-                x: [20, -20],
-                y: [15, -15],
-                rotate: [0, -10, 0],
-                opacity: [0.3, 0.6, 0.3],
-              }}
-              transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }}
-            ></motion.div>
-            <motion.div
-              className="hidden sm:block absolute w-[300px] h-[300px] bg-purple-400/35 rounded-full blur-3xl top-[30%] left-[50%]"
+              className="absolute w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] bg-blue-400/30 rounded-full blur-2xl top-[15%] left-[15%]"
               animate={{
                 x: [-10, 10],
                 y: [-10, 10],
-                rotate: [0, 5, 0],
                 opacity: [0.2, 0.5, 0.2],
               }}
               transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
             ></motion.div>
+            <motion.div
+              className="absolute w-[120px] h-[120px] sm:w-[250px] sm:h-[250px] bg-indigo-400/30 rounded-full blur-2xl bottom-[20%] right-[20%]"
+              animate={{
+                x: [10, -10],
+                y: [10, -10],
+                opacity: [0.2, 0.5, 0.2],
+              }}
+              transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+            ></motion.div>
           </div>
           {/* Starfield Effect */}
           <div className="absolute inset-0">
-            {[...Array(12)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
               <motion.div
                 key={`star-${i}`}
-                className="absolute bg-white/60 dark:bg-white/40 rounded-full w-[1px] h-[1px]"
+                className="absolute bg-white/50 dark:bg-white/30 rounded-full w-[1px] h-[1px]"
                 variants={starfieldVariants}
                 animate="animate"
                 style={{ top: `${Math.random() * 100}%`, left: `${Math.random() * 100}%` }}
@@ -165,11 +151,11 @@ const HomePage: React.FC = () => {
           </div>
           {/* Sparkle Trail */}
           <div className="absolute inset-0">
-            {[...Array(6)].map((_, i) => (
+            {[...Array(4)].map((_, i) => (
               <motion.div
                 key={`trail-${i}`}
-                className={`absolute rounded-full w-${[2, 3, 1.5][i % 3]} h-${[2, 3, 1.5][i % 3]} ${
-                  ['bg-amber-300/60', 'bg-blue-300/60', 'bg-purple-300/60'][i % 3]
+                className={`absolute rounded-full w-1.5 h-1.5 ${
+                  ['bg-amber-300/50', 'bg-blue-300/50', 'bg-purple-300/50'][i % 3]
                 }`}
                 variants={sparkleTrailVariants}
                 animate="animate"
@@ -196,106 +182,78 @@ const HomePage: React.FC = () => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           {/* Mobile Featured Section */}
-          <div className="lg:hidden flex flex-col items-center space-y-6">
+          <div className="lg:hidden flex flex-col items-center space-y-4">
             <motion.div
-              className="w-full space-y-4 text-center"
+              className="w-full space-y-3 text-center"
               initial="hidden"
               animate="visible"
               variants={featuredTextVariants}
             >
               <motion.div className="flex items-center justify-center space-x-2" variants={textChildVariants}>
                 <motion.div variants={iconVariants}>
-                  <Trophy className="h-5 w-5 text-amber-400 animate-bounce" />
-                  <motion.div
-                    className="absolute -top-1 -right-1 bg-amber-300/50 rounded-full w-2 h-2"
-                    animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                  ></motion.div>
+                  <Trophy className="h-4 w-4 text-amber-400" />
                 </motion.div>
-                <span className="text-amber-400 font-semibold uppercase tracking-widest text-sm">
+                <span className="text-amber-400 font-medium uppercase tracking-wider text-xs">
                   Trò chơi nổi bật
                 </span>
               </motion.div>
               <motion.h1
-                className="text-3xl font-extrabold text-white dark:text-white leading-tight"
+                className="text-2xl font-bold text-white dark:text-white leading-tight"
                 variants={textChildVariants}
                 animate={holographicVariants}
               >
                 {FEATURED_GAME.title}
               </motion.h1>
               <motion.p
-                className="text-sm text-gray-600 dark:text-gray-300 max-w-sm mx-auto"
+                className="text-sm text-gray-600 dark:text-gray-300 max-w-xs mx-auto"
                 variants={textChildVariants}
               >
                 {FEATURED_GAME.description}
               </motion.p>
-              <motion.div className="flex items-center justify-center space-x-6" variants={textChildVariants}>
+              <motion.div className="flex items-center justify-center space-x-4" variants={textChildVariants}>
                 <div className="flex items-center">
                   <motion.div variants={iconVariants}>
-                    <Star className="h-4 w-4 text-amber-400 mr-1 animate-pulse" />
-                    <motion.div
-                      className="absolute -top-1 -right-1 bg-amber-300/50 rounded-full w-2 h-2"
-                      animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                      transition={{ duration: 0.8, delay: 0.7 }}
-                    ></motion.div>
+                    <Star className="h-3 w-3 text-amber-400 mr-1" />
                   </motion.div>
-                  <span className="text-gray-700 dark:text-white font-medium text-sm">
-                    {FEATURED_GAME.rating}
-                  </span>
+                  <span className="text-gray-700 dark:text-white text-xs">{FEATURED_GAME.rating}</span>
                 </div>
                 <div className="flex items-center">
                   <motion.div variants={iconVariants}>
-                    <Users className="h-4 w-4 text-blue-400 mr-1 animate-spin-slow" />
-                    <motion.div
-                      className="absolute -top-1 -right-1 bg-blue-300/50 rounded-full w-2 h-2"
-                      animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                      transition={{ duration: 0.8, delay: 0.9 }}
-                    ></motion.div>
+                    <Users className="h-3 w-3 text-blue-400 mr-1" />
                   </motion.div>
-                  <span className="text-gray-700 dark:text-white font-medium text-sm">
-                    {FEATURED_GAME.players}
-                  </span>
+                  <span className="text-gray-700 dark:text-white text-xs">{FEATURED_GAME.players}</span>
                 </div>
               </motion.div>
               <motion.a
                 href={FEATURED_GAME.playLink}
-                className="inline-flex items-center justify-center w-full max-w-sm px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-base font-semibold rounded-full shadow-lg"
+                className="inline-flex items-center justify-center w-full max-w-xs px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-medium rounded-full shadow-md"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
-                <motion.div
-                  animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
-                >
-                  <Play className="h-5 w-5 mr-2" />
-                </motion.div>
+                <Play className="h-4 w-4 mr-1.5" />
                 Chơi ngay
               </motion.a>
             </motion.div>
             <motion.div
-              className="relative w-full max-w-md group"
+              className="relative w-full max-w-sm group"
               initial="hidden"
               animate="visible"
               variants={featuredVideoVariants}
             >
               <motion.div
-                className="absolute -inset-2 bg-blue-400/20 rounded-xl blur-xl group-hover:bg-blue-400/30"
+                className="absolute -inset-1 bg-blue-400/15 rounded-lg blur-lg group-hover:bg-blue-400/25"
                 animate={{
-                  boxShadow: [
-                    '0 0 15px rgba(59, 130, 246, 0.3)',
-                    '0 0 25px rgba(59, 130, 246, 0.5)',
-                    '0 0 15px rgba(59, 130, 246, 0.3)',
-                  ],
+                  opacity: [0.5, 0.7, 0.5],
                 }}
-                transition={{ repeat: Infinity, duration: 3.5 }}
+                transition={{ repeat: Infinity, duration: 3 }}
               ></motion.div>
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-[180px] object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-400"
+                className="w-full h-[160px] object-cover rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
               >
                 <source src={FEATURED_GAME.video} type="video/mp4" />
                 Trình duyệt của bạn không hỗ trợ video.
@@ -304,80 +262,56 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Desktop Featured Section */}
-          <div className="hidden lg:grid grid-cols-2 gap-8 items-center">
+          <div className="hidden lg:grid grid-cols-2 gap-6 items-center">
             <motion.div
-              className="space-y-6 z-10"
+              className="space-y-4 z-10"
               initial="hidden"
               animate="visible"
               variants={featuredTextVariants}
             >
-              <motion.div className="flex items-center space-x-3" variants={textChildVariants}>
+              <motion.div className="flex items-center space-x-2" variants={textChildVariants}>
                 <motion.div variants={iconVariants}>
-                  <Trophy className="h-6 w-6 text-amber-400 animate-bounce" />
-                  <motion.div
-                    className="absolute -top-1 -right-1 bg-amber-300/50 rounded-full w-2 h-2"
-                    animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                  ></motion.div>
+                  <Trophy className="h-5 w-5 text-amber-400" />
                 </motion.div>
-                <span className="text-amber-400 font-semibold uppercase tracking-widest text-base">
+                <span className="text-amber-400 font-medium uppercase tracking-wider text-sm">
                   Trò chơi nổi bật
                 </span>
               </motion.div>
               <motion.h1
-                className="text-5xl font-extrabold text-white dark:text-white leading-tight"
+                className="text-4xl font-bold text-white dark:text-white leading-tight"
                 variants={textChildVariants}
                 animate={holographicVariants}
               >
                 {FEATURED_GAME.title}
               </motion.h1>
               <motion.p
-                className="text-lg text-gray-600 dark:text-gray-300 max-w-md"
+                className="text-base text-gray-600 dark:text-gray-300 max-w-sm"
                 variants={textChildVariants}
               >
                 {FEATURED_GAME.description}
               </motion.p>
-              <motion.div className="flex items-center space-x-8" variants={textChildVariants}>
+              <motion.div className="flex items-center space-x-6" variants={textChildVariants}>
                 <div className="flex items-center">
                   <motion.div variants={iconVariants}>
-                    <Star className="h-5 w-5 text-amber-400 mr-1.5 animate-pulse" />
-                    <motion.div
-                      className="absolute -top-1 -right-1 bg-amber-300/50 rounded-full w-2 h-2"
-                      animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                      transition={{ duration: 0.8, delay: 0.7 }}
-                    ></motion.div>
+                    <Star className="h-4 w-4 text-amber-400 mr-1" />
                   </motion.div>
-                  <span className="text-gray-700 dark:text-white font-medium">
-                    {FEATURED_GAME.rating}
-                  </span>
+                  <span className="text-gray-700 dark:text-white text-sm">{FEATURED_GAME.rating}</span>
                 </div>
                 <div className="flex items-center">
                   <motion.div variants={iconVariants}>
-                    <Users className="h-5 w-5 text-blue-400 mr-1.5 animate-spin-slow" />
-                    <motion.div
-                      className="absolute -top-1 -right-1 bg-blue-300/50 rounded-full w-2 h-2"
-                      animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                      transition={{ duration: 0.8, delay: 0.9 }}
-                    ></motion.div>
+                    <Users className="h-4 w-4 text-blue-400 mr-1" />
                   </motion.div>
-                  <span className="text-gray-700 dark:text-white font-medium">
-                    {FEATURED_GAME.players}
-                  </span>
+                  <span className="text-gray-700 dark:text-white text-sm">{FEATURED_GAME.players}</span>
                 </div>
               </motion.div>
               <motion.a
                 href={FEATURED_GAME.playLink}
-                className="inline-flex items-center justify-center w-64 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-lg font-semibold rounded-full shadow-xl"
+                className="inline-flex items-center justify-center w-56 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-base font-medium rounded-full shadow-md"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
-                <motion.div
-                  animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
-                >
-                  <Play className="h-6 w-6 mr-2" />
-                </motion.div>
+                <Play className="h-5 w-5 mr-1.5" />
                 Chơi ngay
               </motion.a>
             </motion.div>
@@ -388,22 +322,18 @@ const HomePage: React.FC = () => {
               variants={featuredVideoVariants}
             >
               <motion.div
-                className="absolute -inset-3 bg-blue-400/20 rounded-2xl blur-xl group-hover:bg-blue-400/30"
+                className="absolute -inset-1.5 bg-blue-400/15 rounded-xl blur-lg group-hover:bg-blue-400/25"
                 animate={{
-                  boxShadow: [
-                    '0 0 15px rgba(59, 130, 246, 0.3)',
-                    '0 0 25px rgba(59, 130, 246, 0.5)',
-                    '0 0 15px rgba(59, 130, 246, 0.3)',
-                  ],
+                  opacity: [0.5, 0.7, 0.5],
                 }}
-                transition={{ repeat: Infinity, duration: 3.5 }}
+                transition={{ repeat: Infinity, duration: 3 }}
               ></motion.div>
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-[400px] object-cover rounded-2xl shadow-2xl group-hover:shadow-3xl transition-shadow duration-400"
+                className="w-full h-[350px] object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
               >
                 <source src={FEATURED_GAME.video} type="video/mp4" />
                 Trình duyệt của bạn không hỗ trợ video.
@@ -413,83 +343,78 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Recommended Games Section - Unchanged */}
-      <section className="py-12 bg-white dark:bg-gray-800">
+      {/* Recommended Games Section */}
+      <section className="py-10 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
+            className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             Đề xuất game
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {recommendedGames.map((game) => (
               <motion.div
                 key={game.id}
-                className="relative bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg group"
-                initial={{ opacity: 0, y: 40 }}
+                className="relative bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md group"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="relative">
                   <motion.img
                     src={game.image}
                     alt={game.title}
-                    className="w-full h-48 object-cover group-hover:opacity-95"
-                    transition={{ duration: 0.3 }}
+                    className="w-full h-44 object-cover group-hover:opacity-90"
+                    transition={{ duration: 0.2 }}
                   />
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.2 }}
                   ></motion.div>
                   <motion.span
-                    className="absolute top-2 right-2 px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded-full"
-                    initial={{ opacity: 0, x: 10 }}
+                    className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-blue-600 text-white text-xs font-medium rounded-full"
+                    initial={{ opacity: 0, x: 5 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.3 }}
                     viewport={{ once: true }}
                   >
                     {game.category}
                   </motion.span>
                 </div>
-                <div className="p-4 space-y-3">
+                <div className="p-3 space-y-2">
                   <motion.h3
-                    className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-400"
-                    initial={{ opacity: 0.7 }}
+                    className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-blue-400"
+                    initial={{ opacity: 0.8 }}
                     whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.2 }}
                   >
                     {game.title}
                   </motion.h3>
                   <div className="flex items-center">
                     <motion.div variants={iconVariants}>
-                      <Star className="h-4 w-4 text-amber-400 mr-1 animate-pulse" />
+                      <Star className="h-3 w-3 text-amber-400 mr-1" />
                     </motion.div>
-                    <span className="text-gray-600 dark:text-gray-300 text-sm">{game.rating}</span>
+                    <span className="text-gray-600 dark:text-gray-300 text-xs">{game.rating}</span>
                   </div>
                 </div>
                 <motion.a
                   href={game.playLink}
-                  className="relative flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-base font-semibold shadow-md"
+                  className="relative flex items-center justify-center w-full px-3 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-medium shadow-sm"
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  <motion.div
-                    animate={{ y: [0, -2, 0] }}
-                    transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
-                  >
-                    <Play className="h-5 w-5 mr-2" />
-                  </motion.div>
+                  <Play className="h-4 w-4 mr-1.5" />
                   Chơi ngay
                 </motion.a>
                 <motion.div
-                  className="absolute top-2 left-2 h-3 w-3 bg-amber-400 rounded-full"
+                  className="absolute top-1.5 left-1.5 h-2 w-2 bg-amber-400 rounded-full"
                   animate={glowVariants}
                 ></motion.div>
               </motion.div>

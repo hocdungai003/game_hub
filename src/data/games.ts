@@ -10,6 +10,7 @@ import vuatiengviet from '../assets/vuatiengviet.png'
 import doantu002 from '../assets/doantu002.png'
 import tiengduchoc from '../assets/tiengduchoc.png'
 import domin from '../assets/domin.png'
+import sudoku from '../assets/sudoku.png'
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4'
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4'
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4'
@@ -28,16 +29,13 @@ export const GAMES = [
     playLink: 'https://hocdungai003.github.io/do_min_003/',
   },
   {
-    id: 'featured-1',
-    title: 'Rắn Săn Mồi - 01',
-    category: 'Action',
-    image: ransanmoi01,
-    rating: 4.5,
-    views: '18K+',
-    players: '10K+',
-    playLink: 'https://hocdungai003.github.io/ran_san_moi_01/',
-    sourceLink: 'https://github.com/hocdungai003/ran_san_moi_01',
-    featured: true,
+    id: 'game-10',
+    title: 'Sudoku',
+    category: 'Memory',
+    image: sudoku,
+    rating: 4.3,
+    players: '11K+',
+    playLink: 'https://hocdungai003.github.io/sudoku/',
   },
   {
     id: 'game-1',
@@ -47,24 +45,6 @@ export const GAMES = [
     rating: 4.5,
     players: '5K+',
     playLink: 'https://hocdungai003.github.io/caro003/',
-  },
-  {
-    id: 'game-2',
-    title: 'Bắn Cá',
-    category: 'Strategy',
-    image: banca,
-    rating: 4.7,
-    players: '8K+',
-    playLink: 'https://hocdungai003.github.io/ban_ca/',
-  },
-  {
-    id: 'game-3',
-    title: 'Chém hoa quả',
-    category: 'Action',
-    image: chemhoaqua,
-    rating: 4.3,
-    players: '13K+',
-    playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
   },
   {
     id: 'game-4',
@@ -110,6 +90,38 @@ export const GAMES = [
     rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/hoc_tieng_duc/',
+  },
+
+  {
+    id: 'game-2',
+    title: 'Bắn Cá',
+    category: 'Strategy',
+    image: banca,
+    rating: 4.7,
+    players: '8K+',
+    playLink: 'https://hocdungai003.github.io/ban_ca/',
+  },
+  {
+    id: 'game-3',
+    title: 'Chém hoa quả',
+    category: 'Action',
+    image: chemhoaqua,
+    rating: 4.3,
+    players: '13K+',
+    playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
+  },
+
+  {
+    id: 'featured-1',
+    title: 'Rắn Săn Mồi - 01',
+    category: 'Action',
+    image: ransanmoi01,
+    rating: 4.5,
+    views: '18K+',
+    players: '10K+',
+    playLink: 'https://hocdungai003.github.io/ran_san_moi_01/',
+    sourceLink: 'https://github.com/hocdungai003/ran_san_moi_01',
+    featured: true,
   },
   
 ];
