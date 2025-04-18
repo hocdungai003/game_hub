@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { GamepadIcon, Search, Moon, Sun, Menu } from 'lucide-react'; // Thêm Menu icon
+import { GamepadIcon, Search, Moon, Sun, Menu } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
 import GamesPage from './pages/GamesPage';
@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import { initGA, logPageView } from './utils/analytics';
 
 function App() {
-   useEffect(() => {
+  useEffect(() => {
     initGA();
     logPageView();
   }, []);
@@ -54,7 +54,7 @@ function App() {
           <Sidebar currentPage={currentPage} onNavigate={setCurrentPage} isOpen={isSidebarOpen} onClose={toggleSidebar} />
 
           <div className="flex-1">
-            <header className="fixed top-0 right-0 left-0 md:left-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-20">
+            <header className="fixed top-0 right-0 left-0 md:left-40 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-sm z-20">
               <div className="flex items-center justify-between h-full px-6">
                 {/* Nút Menu trên mobile */}
                 <button
@@ -107,7 +107,7 @@ function App() {
               </div>
             </header>
 
-            <main className="pt-16 md:ml-16 flex-1">
+            <main className="pt-16 md:ml-40 flex-1">
               {currentPage === 'home' ? (
                 <HomePage />
               ) : currentPage === 'games' ? (
