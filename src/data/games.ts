@@ -35,7 +35,7 @@ export const GAMES = [
     image: sudoku,
     rating: 4.3,
     players: '11K+',
-    playLink: 'https://hocdungai003.github.io/sudoku/',
+    playLink: 'https://hocdungai003.github.io/sudoku003/',
   },
   {
     id: 'game-1',
