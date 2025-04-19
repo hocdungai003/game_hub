@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Play, Star, Trophy, Users } from 'lucide-react';
 import { FEATURED_GAME } from '../../data/games';
 import { motion } from 'framer-motion';
 
 const FeaturedGame: React.FC = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const featuredTextVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -103,6 +105,13 @@ const FeaturedGame: React.FC = () => {
         '0 0 5px rgba(59, 130, 246, 0.5)',
       ],
       transition: { repeat: Infinity, duration: 4, ease: 'easeInOut' },
+    },
+  };
+
+  const spinnerVariants = {
+    animate: {
+      rotate: 360,
+      transition: { repeat: Infinity, duration: 1.5, ease: 'linear' },
     },
   };
 
@@ -250,12 +259,27 @@ const FeaturedGame: React.FC = () => {
               variants={glowVariants}
               animate="animate"
             ></motion.div>
+            {!isVideoLoaded && (
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center bg-gray-200/50 dark:bg-gray-700/50 rounded-xl"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: isVideoLoaded ? 0 : 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  className="w-12 h-12 border-4 border-t-blue-500 border-blue-200 rounded-full"
+                  variants={spinnerVariants}
+                  animate="animate"
+                ></motion.div>
+              </motion.div>
+            )}
             <video
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-[160px] object-cover rounded-xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
+              onLoadedData={() => setIsVideoLoaded(true)}
             >
               <source src={FEATURED_GAME.video} type="video/mp4" />
               Trình duyệt của bạn không hỗ trợ video.
@@ -328,12 +352,27 @@ const FeaturedGame: React.FC = () => {
               variants={glowVariants}
               animate="animate"
             ></motion.div>
+            {!isVideoLoaded && (
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center bg-gray-200/50 dark:bg-gray-700/50 rounded-2xl"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: isVideoLoaded ? 0 : 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  className="w-16 h-16 border-4 border-t-blue-500 border-blue-200 rounded-full"
+                  variants={spinnerVariants}
+                  animate="animate"
+                ></motion.div>
+              </motion.div>
+            )}
             <video
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-[280px] object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
+              onLoadedData={() => setIsVideoLoaded(true)}
             >
               <source src={FEATURED_GAME.video} type="video/mp4" />
               Trình duyệt của bạn không hỗ trợ video.
