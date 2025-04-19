@@ -7,7 +7,7 @@ import GamesPage from './pages/GamesPage';
 import AnimationPage from './pages/AnimationPage';
 import Footer from './components/Footer';
 import { initGA, logPageView } from './utils/analytics';
-import { GAMES, ANIMATIONS, Game,type Animation } from './data/games';
+import { GAMES, ANIMATIONS, Game, type Animation } from './data/games';
 import { normalizeVietnameseText } from './utils/normalizeText';
 
 // Chuẩn hóa dữ liệu với các trường không dấu
@@ -29,7 +29,11 @@ function App() {
     logPageView();
   }, []);
 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  // Khởi tạo isDarkMode từ localStorage, mặc định là true nếu không có giá trị
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : true;
+  });
   const [currentPage, setCurrentPage] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -50,7 +54,9 @@ function App() {
   const fuseGames = new Fuse(normalizedGames, fuseOptions);
   const fuseAnimations = new Fuse(normalizedAnimations, fuseOptions);
 
+  // Cập nhật localStorage và classList khi isDarkMode thay đổi
   useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -100,7 +106,7 @@ function App() {
   }, []);
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
+    setIsDarkMode((prev: boolean) => !prev); // Thêm kiểu boolean cho prev
   };
 
   const handleSearch = (e: React.FormEvent) => {
