@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
 
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-950 h-[calc(100vh-64px)] overflow-hidden max-md:min-h-screen max-md:overflow-auto max-md:h-auto">
+    <div className="bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-950 h-[calc(100vh-64px)] overflow-hidden max-md:min-h-screen max-md:overflow-auto max-md:h-auto max-lg:min-h-screen max-lg:overflow-auto max-lg:h-auto">
       <div className="px-4 sm:px-6 lg:px-8 py-4 md:py-6 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-10 gap-4 lg:h-[calc(100vh-64px-2rem)] max-lg:min-h-screen">
           {/* Left Column: Featured and New Games (6 parts, Fixed on Desktop) */}
