@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Play, Star, Trophy, Users } from 'lucide-react';
 import { FEATURED_GAME } from '../../data/games';
 import { motion } from 'framer-motion';
+import { trackGameClick } from '../../utils/analytics';
 
 const FeaturedGame: React.FC = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -243,6 +244,7 @@ const FeaturedGame: React.FC = () => {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
+              onClick={() => trackGameClick(FEATURED_GAME.title)} // Thêm onClick
             >
               <Play className="h-5 w-5 mr-2" />
               Chơi ngay

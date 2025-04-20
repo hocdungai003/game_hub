@@ -3,6 +3,8 @@ import { Play, Star, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CATEGORIES, ANIMATIONS } from '../data/games';
 import Footer from '../components/Footer';
+import { trackGameClick } from '../utils/analytics';
+
 
 interface Game {
   id: string;
@@ -125,6 +127,7 @@ const GamesPage: React.FC<GamesPageProps> = ({ searchResults, searchQuery }) => 
                 <a
                   href={'playLink' in item ? item.playLink : item.viewLink}
                   className="flex items-center justify-center w-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-all group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600"
+                  onClick={() => trackGameClick(item.title)} // Thêm onClick
                 >
                   <Play className="h-4 w-4 mr-1" />
                   {'playLink' in item ? 'Play' : 'View'}

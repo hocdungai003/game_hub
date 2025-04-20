@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Eye, Code, Users } from 'lucide-react';
 import { CATEGORIES } from '../data/games';
 import Footer from '../components/Footer';
+import { trackGameClick } from '../utils/analytics';
+
 
 interface Animation {
   id: string;
@@ -83,6 +85,7 @@ const AnimationPage: React.FC<AnimationPageProps> = ({ searchResults, searchQuer
                   <a
                     href={animation.viewLink}
                     className="flex-1 flex items-center justify-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600"
+                    onClick={() => trackGameClick(animation.title)}
                   >
                     <Eye className="h-4 w-4 mr-1" />
                     View
@@ -90,6 +93,7 @@ const AnimationPage: React.FC<AnimationPageProps> = ({ searchResults, searchQuer
                   <a
                     href={animation.sourceLink}
                     className="flex-1 flex items-center justify-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors group-hover:bg-gradient-to-r group-hover:from-gray-600 group-hover:to-gray-500"
+                    onClick={() => trackGameClick(`source ${animation.title}`)}
                   >
                     <Code className="h-4 w-4 mr-1" />
                     Source

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Play, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { trackGameClick } from '../../utils/analytics';
+
 
 interface RecommendedGameItemProps {
   game: {
@@ -93,6 +95,7 @@ const RecommendedGameItem: React.FC<RecommendedGameItemProps> = ({ game }) => {
         variants={buttonVariants}
         whileHover="hover"
         whileTap="tap"
+        onClick={() => trackGameClick(game.title)} // Thêm onClick
       >
         <Play className="h-4 w-4 mr-1" />
         Chơi ngay
