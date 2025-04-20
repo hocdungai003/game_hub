@@ -168,7 +168,7 @@ function App() {
                 <div className="flex items-center group cursor-pointer" onClick={() => setCurrentPage('home')}>
                   <GamepadIcon className="h-8 w-8 text-indigo-600 dark:text-indigo-400 transform group-hover:scale-110 transition-transform" />
                   <span className="ml-2 text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent dark:from-indigo-400 dark:to-purple-400 hidden md:inline">
-                    GameHub
+                    Game
                   </span>
                 </div>
                 <form onSubmit={handleSearch} className="flex-1 max-w-xl mx-4">

@@ -31,6 +31,7 @@ export interface Game {
   featured?: boolean;
   views?: string;
   sourceLink?: string;
+  newupdate?: boolean; // Added newupdate property
 }
 
 export interface Animation {
@@ -54,6 +55,7 @@ export const GAMES: Game[] = [
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/hoc_tieng_duc/',
     new: false,
+    newupdate: true, // Added newupdate
   },
   {
     id: 'game-10',
@@ -64,6 +66,7 @@ export const GAMES: Game[] = [
     players: '11K+',
     playLink: 'https://hocdungai003.github.io/sudoku003/',
     new: true,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-9',
@@ -74,6 +77,7 @@ export const GAMES: Game[] = [
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/do_min_003/',
     new: true,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-1',
@@ -84,6 +88,7 @@ export const GAMES: Game[] = [
     players: '5K+',
     playLink: 'https://hocdungai003.github.io/caro003/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-4',
@@ -94,6 +99,7 @@ export const GAMES: Game[] = [
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/2048_game/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-5',
@@ -104,6 +110,7 @@ export const GAMES: Game[] = [
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/lat_the_bai_01/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-6',
@@ -114,6 +121,7 @@ export const GAMES: Game[] = [
     players: '30K+',
     playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-7',
@@ -124,8 +132,8 @@ export const GAMES: Game[] = [
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/doan_tu_002/',
     new: false,
+    newupdate: true, // Added newupdate
   },
-
   {
     id: 'game-11',
     title: 'Puzzle Slider - Trượt số',
@@ -135,6 +143,7 @@ export const GAMES: Game[] = [
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/xepso003/',
     new: true,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-2',
@@ -145,6 +154,7 @@ export const GAMES: Game[] = [
     players: '8K+',
     playLink: 'https://hocdungai003.github.io/ban_ca/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-3',
@@ -155,6 +165,7 @@ export const GAMES: Game[] = [
     players: '13K+',
     playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
     new: false,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'game-12',
@@ -165,6 +176,7 @@ export const GAMES: Game[] = [
     players: '1K+',
     playLink: 'https://hocdungai003.github.io/phanbietmau003/',
     new: true,
+    newupdate: false, // Added newupdate
   },
   {
     id: 'featured-1',
@@ -178,6 +190,7 @@ export const GAMES: Game[] = [
     sourceLink: 'https://github.com/hocdungai003/ran_san_moi_01',
     featured: true,
     new: false,
+    newupdate: false, // Added newupdate
   },
 ];
 
@@ -200,7 +213,7 @@ export const FEATURED_GAME = {
   description: 'Xem ai là Vị Vua của Tiếng Việt nào 😒',
   rating: 4.9,
   image: vuatiengviet,
-  video:vuatiengvietvid,
+  video: vuatiengvietvid,
   views: '13K+',
   players: '13K+',
   playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',

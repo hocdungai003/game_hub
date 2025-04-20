@@ -3,15 +3,16 @@ import { Play, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { trackGameClick } from '../../utils/analytics';
 
-
 interface RecommendedGameItemProps {
   game: {
-    id: string; // Changed from number to string
+    id: string;
     title: string;
     image: string;
     rating: number;
     playLink: string;
     category: string;
+    new?: boolean;
+    newupdate?: boolean;
   };
 }
 
@@ -37,11 +38,19 @@ const RecommendedGameItem: React.FC<RecommendedGameItemProps> = ({ game }) => {
 
   const glowVariants = {
     animate: {
-      opacity: [0.3, 0.5, 0.3],
-      scale: [1, 1.02, 1],
-      transition: { repeat: Infinity, duration: 2.5 },
+      scale: [1, 1.15, 1],
+      opacity: [0.6, 1, 0.6],
+      boxShadow: [
+        '0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px currentColor',
+        '0 0 12px rgba(255, 255, 255, 0.6), 0 0 18px currentColor',
+        '0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px currentColor',
+      ],
+      transition: { repeat: Infinity, duration: 1.8, ease: 'easeInOut' },
     },
   };
+
+  // Determine star color based on new and newupdate
+  const starColor = game.new ? 'text-amber-400' : game.newupdate ? 'text-indigo-600' : null;
 
   return (
     <motion.div
@@ -95,15 +104,20 @@ const RecommendedGameItem: React.FC<RecommendedGameItemProps> = ({ game }) => {
         variants={buttonVariants}
         whileHover="hover"
         whileTap="tap"
-        onClick={() => trackGameClick(game.title)} // Thêm onClick
+        onClick={() => trackGameClick(game.title)}
       >
         <Play className="h-4 w-4 mr-1" />
         Chơi ngay
       </motion.a>
-      <motion.div
-        className="absolute top-1 left-1 h-2 w-2 bg-amber-400 rounded-full"
-        animate={glowVariants}
-      ></motion.div>
+      {starColor && (
+        <motion.div
+          className="absolute top-1 left-1 rounded-full bg-gradient-to-br from-white/30 to-transparent p-1.5 shadow-md"
+          animate={glowVariants}
+          style={{ color: starColor === 'text-amber-400' ? '#f59e0b' : '#4f46e5' }} // Match Tailwind colors
+        >
+          <Star className={`h-5 w-5 ${starColor} fill-current`} />
+        </motion.div>
+      )}
     </motion.div>
   );
 };
