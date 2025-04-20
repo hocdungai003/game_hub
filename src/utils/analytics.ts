@@ -18,3 +18,11 @@ export const trackGameClick = (gameName: string) => {
     label: gameName, // Tên game, ví dụ: "Game A"
   });
 };
+// Thêm hàm để theo dõi sự kiện tìm kiếm
+export const trackSearch = (searchTerm: string) => {
+  ReactGA.event({
+    category: 'Search',
+    action: 'Search',
+    label: searchTerm, // Từ khóa tìm kiếm, ví dụ: "action game"
+  });
+};

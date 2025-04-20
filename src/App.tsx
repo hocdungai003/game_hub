@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import { initGA, logPageView } from './utils/analytics';
 import { GAMES, ANIMATIONS, Game, type Animation } from './data/games';
 import { normalizeVietnameseText } from './utils/normalizeText';
+import { trackSearch } from './utils/analytics'
 
 // Chuẩn hóa dữ liệu với các trường không dấu
 const normalizedGames = GAMES.map((game) => ({
@@ -75,6 +76,9 @@ function App() {
       const animationSuggestions = fuseAnimations.search(normalizedQuery, { limit: 2 }).map((result) => result.item);
       setSuggestions([...gameSuggestions, ...animationSuggestions]);
       setShowSuggestions(true);
+      // Debounce gửi sự kiện tìm kiếm
+      const timeout = setTimeout(() => trackSearch(query), 1000);
+      return () => clearTimeout(timeout);
     } else {
       setSuggestions([]);
       setShowSuggestions(false);
@@ -85,6 +89,7 @@ function App() {
   const handleSuggestionClick = (suggestion: Game | Animation) => {
     setSearchQuery(suggestion.title);
     setShowSuggestions(false);
+    trackSearch(suggestion.title);
     setCurrentPage(suggestion instanceof Animation ? 'animations' : 'games');
   };
 
@@ -111,6 +116,7 @@ function App() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    trackSearch(searchQuery.trim() || 'empty');
     setShowSuggestions(false);
     setCurrentPage('games');
   };
