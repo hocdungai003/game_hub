@@ -11,6 +11,7 @@ import tiengduchoc from '../assets/tiengduchoc.png';
 import domin from '../assets/domin.png';
 import sudoku from '../assets/sudoku.png';
 import truotso from '../assets/truotso.png';
+import phanbietmau from '../assets/phanbietmau.png';
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4';
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4';
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4';
@@ -52,6 +53,16 @@ export const GAMES: Game[] = [
     rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/hoc_tieng_duc/',
+    new: false,
+  },
+  {
+    id: 'game-10',
+    title: 'Sudoku',
+    category: 'Memory',
+    image: sudoku,
+    rating: 4.3,
+    players: '11K+',
+    playLink: 'https://hocdungai003.github.io/sudoku003/',
     new: true,
   },
   {
@@ -62,16 +73,6 @@ export const GAMES: Game[] = [
     rating: 4.7,
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/do_min_003/',
-    new: true,
-  },
-  {
-    id: 'game-10',
-    title: 'Sudoku',
-    category: 'Memory',
-    image: sudoku,
-    rating: 4.3,
-    players: '11K+',
-    playLink: 'https://hocdungai003.github.io/sudoku003/',
     new: true,
   },
   {
@@ -154,6 +155,16 @@ export const GAMES: Game[] = [
     players: '13K+',
     playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
     new: false,
+  },
+  {
+    id: 'game-12',
+    title: 'Phân biệt màu',
+    category: 'Strategy',
+    image: phanbietmau,
+    rating: 4.4,
+    players: '1K+',
+    playLink: 'https://hocdungai003.github.io/phanbietmau003/',
+    new: true,
   },
   {
     id: 'featured-1',
