@@ -12,6 +12,7 @@ import domin from '../assets/domin.png';
 import sudoku from '../assets/sudoku.png';
 import truotso from '../assets/truotso.png';
 import phanbietmau from '../assets/phanbietmau.png';
+import ailatrieuphu from '../assets/ailatrieuphu.png';
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4';
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4';
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4';
@@ -73,7 +74,7 @@ export const GAMES: Game[] = [
     title: 'Dò Mìn',
     category: 'Memory',
     image: domin,
-    rating: 4.7,
+    rating: 4.5,
     players: '12K+',
     playLink: 'https://hocdungai003.github.io/do_min_003/',
     new: true,
@@ -117,7 +118,7 @@ export const GAMES: Game[] = [
     title: 'Vua Tiếng Việt',
     category: 'Memory',
     image: vuatiengviet,
-    rating: 4.4,
+    rating: 4.3,
     players: '30K+',
     playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
     new: false,
@@ -128,7 +129,7 @@ export const GAMES: Game[] = [
     title: 'Đoán Từ - Trả lời câu hỏi',
     category: 'Memory',
     image: doantu002,
-    rating: 4.4,
+    rating: 4.2,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/doan_tu_002/',
     new: false,
@@ -139,7 +140,7 @@ export const GAMES: Game[] = [
     title: 'Puzzle Slider - Trượt số',
     category: 'Strategy',
     image: truotso,
-    rating: 4.2,
+    rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/xepso003/',
     new: true,
@@ -161,7 +162,7 @@ export const GAMES: Game[] = [
     title: 'Chém hoa quả',
     category: 'Action',
     image: chemhoaqua,
-    rating: 4.1,
+    rating: 3.9,
     players: '13K+',
     playLink: 'https://hocdungai003.github.io/chem_hoa_qua-01/',
     new: false,
@@ -172,9 +173,20 @@ export const GAMES: Game[] = [
     title: 'Phân biệt màu',
     category: 'Strategy',
     image: phanbietmau,
-    rating: 4.4,
+    rating: 4.2,
     players: '1K+',
     playLink: 'https://hocdungai003.github.io/phanbietmau003/',
+    new: true,
+    newupdate: false, // Added newupdate
+  },
+  {
+    id: 'game-13',
+    title: 'Ai là triệu phú',
+    category: 'Strategy',
+    image: ailatrieuphu,
+    rating: 4.4,
+    players: '1K+',
+    playLink: 'https://hocdungai003.github.io/ailatrieuphu003/',
     new: true,
     newupdate: false, // Added newupdate
   },
