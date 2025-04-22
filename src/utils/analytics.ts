@@ -14,8 +14,8 @@ export const logPageView = () => {
 export const trackGameClick = (gameName: string) => {
   ReactGA.event({
     category: 'Game',
-    action: 'Open Game',
-    label: gameName,
+    action: `Game: ${gameName}`,
+    // label: gameName,
   });
 };
 // Thêm hàm để theo dõi sự kiện tìm kiếm
