@@ -12,7 +12,7 @@ import domin from '../assets/domin.png';
 import sudoku from '../assets/sudoku.png';
 import truotso from '../assets/truotso.png';
 import phanbietmau from '../assets/phanbietmau.png';
-import ailatrieuphu from '../assets/ailatrieuphu.png';
+import ailatrieuphu from '../assets/ailatrieuphu.jpg';
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4';
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4';
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4';
