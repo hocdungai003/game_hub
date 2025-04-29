@@ -12,11 +12,13 @@ import domin from '../assets/domin.png';
 import sudoku from '../assets/sudoku.png';
 import truotso from '../assets/truotso.png';
 import phanbietmau from '../assets/phanbietmau.png';
+import covua from '../assets/covua.png';
 import ailatrieuphu from '../assets/ailatrieuphu.jpg';
 import ransanmoivideo from '../assets/featured/videoransanmoi.mp4';
 import chemhoaquavideo from '../assets/featured/chemhoaquavideo.mp4';
 import vuatiengvietvid from '../assets/featured/vuatiengviet.mp4';
 import caro from '../assets/featured/caro.mp4';
+import ailatrieuphuv from '../assets/featured/ailatrieuphu.mp4';
 
 export const CATEGORIES = ['All', 'Action', 'Strategy', 'Puzzle', 'Sports', 'Memory', 'Study'] as const;
 
@@ -143,7 +145,7 @@ export const GAMES: Game[] = [
     rating: 4.1,
     players: '3K+',
     playLink: 'https://hocdungai003.github.io/xepso003/',
-    new: true,
+    new: false,
     newupdate: false, // Added newupdate
   },
   {
@@ -188,6 +190,17 @@ export const GAMES: Game[] = [
     players: '1K+',
     playLink: 'https://hocdungai003.github.io/ailatrieuphu003/',
     new: true,
+    newupdate: true, // Added newupdate
+  },
+  {
+    id: 'game-14',
+    title: 'Cờ Vua (Chess)',
+    category: 'Strategy',
+    image: covua,
+    rating: 4.3,
+    players: '1K+',
+    playLink: 'https://hocdungai003.github.io/co_vua_chess003/',
+    new: true,
     newupdate: false, // Added newupdate
   },
   {
@@ -221,14 +234,14 @@ export const ANIMATIONS: Animation[] = [
 
 export const FEATURED_GAME = {
   id: 'featured-1',
-  title: 'Vua Tiếng Việt',
-  description: 'Xem ai là Vị Vua của Tiếng Việt nào 😒',
-  rating: 4.9,
-  image: vuatiengviet,
-  video: vuatiengvietvid,
+  title: 'Ai là triệu phú',
+  description: 'Triệu phú đâu hết rồi nhỉ 😒',
+  rating: 4.4,
+  image: ailatrieuphu,
+  video: ailatrieuphuv,
   views: '13K+',
   players: '13K+',
-  playLink: 'https://hocdungai003.github.io/vua_tieng_viet_003/',
-  sourceLink: 'https://github.com/hocdungai003/vua_tieng_viet_003',
+  playLink: 'https://hocdungai003.github.io/ailatrieuphu003/',
+  sourceLink: '',
   featured: true,
 };
